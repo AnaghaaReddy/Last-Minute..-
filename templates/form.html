@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Content Generator</h1>
+    <form action="/generate" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="specimen_name">Specimen Name:</label>
+        <input type="text" id="specimen_name" name="specimen_name"><br><br>
+        
+        <label for="relation">Relation to Specimen:</label>
+        <input type="text" id="relation" name="relation"><br><br>
+        
+        <label for="qualities">Qualities of Specimen:</label>
+        <input type="text" id="qualities" name="qualities"><br><br>
+        
+        <label for="content_type">Select Content Type:</label>
+        <select id="content_type" name="content_type">
+            <option value="wedding_speech">Wedding Speech</option>
+            <option value="birthday_speech">Birthday Speech</option>
+            <option value="birthday_note">Birthday Note</option>
+        </select><br><br>
+        
+        <input type="submit" value="Generate Content">
+    </form>
+</body>
+</html>
